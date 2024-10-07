@@ -34,7 +34,14 @@
             </p>
           </blockquote>
           <div class="bg-info p-3">
-            <p>Zde bude řešení.</p>
+          <p>
+            <ul>
+              <li>JavaScript je <b>skriptovací jazyk interpretovaný na straně prohlížeče </b>(on client side)</li>
+              <li>Bývá označován také jako <b>ECMA script </b></li>
+              <li>Je využíván pro vytváření dynamických a interaktivních webových aplikací – změna vzhledu i 
+                obsahu stránky na základě akcí uživatele, ošetření formulářových vstupů, grafické efekty...</li>
+            </ul>
+          </p>
           </div>
         </div>
         <div class="col-sm-6 bg-secondary text-light p-5">
@@ -44,7 +51,15 @@
             <p class="text-warning">Použij angličtinu!</p>
           </blockquote>
           <div class="bg-info p-3">
-            <p>Zde bude řešení.</p>
+            <p>
+              <ol>
+                <li>JavaScript is case sensitive. It is important to respect the letter size.</li>
+                <li>Commands have to end with semicolon.</li>
+                <li>A block of commands is introduced by braces.</li>
+                <li>JavaScript uses an assignment operator ( = ) to assign values to variables.</li>
+                <li>JavaScript uses the Unicode character set.</li>
+              </ol>
+            </p>
           </div>
         </div>
       </div>
@@ -60,8 +75,13 @@
           </blockquote>
           <div class="bg-light p-3">
             <code>
-              // 1. Vložit kód do tagu script<br />
-              &lt;script&gt;console.log('Hello');&lt;/script&gt;
+              // 1. Vložit kód do tagu script<br>
+              &lt;script&gt;console.log('Hello');&lt;/script&gt;<br>
+              // 2. Připojit externí soubor <br>
+              &lt;script type=text/javascript' src='soubor.js'&gt;console.log('Hello');&lt;/script&gt;<br>
+              // 3. Vložit kód jako reakci na události <br>
+              &lt;button onclick=“alert('Ahoj');“&gt;console.log
+              ('Hello');&lt;/button&gt;<br>
             </code>
           </div>
         </div>
@@ -85,7 +105,7 @@
               ... // reálné číslo (typ number)<br />
               ... // zápis desetinného čísla pomocí exponentu<br />
               ... // typ string<br />
-              let prestupny = false // ...<br />
+              let prestupny = false // logický typ boolean ...<br />
             </code>
           </div>
         </div>
@@ -202,7 +222,7 @@
 
           let vystup = '<li>' + pozdrav + " tady " + jmeno + " " + prijmeni + '</li>';
           vystup += `<li>Váha = ${vaha} kg a výška = ${vyska} cm </li>`;
-          vystup += `<li>Motto: \"Fentanyl\"</li>`;
+          vystup += `<li>Motto: \"Nevím\"</li>`;
           console.log(vystup);
           // alert(vystup);
           const sedmy = document.getElementById('sedmy');
@@ -260,7 +280,17 @@
             </button>
           </div>
           <script>
-            <!-- Zadejte JS kód -->
+              function zapisCisla(){
+                let cislo = prompt("Zadej číslo");
+                  if (cislo == 0) { 
+                  return 'Nula'; 
+                  } else if (cislo % 2 == 1) { 
+                  return 'Liché'; 
+                  } else { 
+                  return 'Sudé'; 
+                } 
+              }
+              console.log(zapisCisla())
           </script>
         </div>
         <div class="col-sm-6 bg-secondary text-light p-5">
