@@ -325,7 +325,17 @@
             <a href="">Vypiš den</a>
           </div>
           <script>
-           <!-- Zadejte JS kód -->
+          let den = 1;
+          function denVTydnu(den){
+            switch (den){
+              case 1: return "Pondělí";
+              case 2: return "Úterý";
+              case 3: return "Středa";
+              case 4: return "Čtvrtek";
+              case 5: return "Pátek";
+              default: return "Víkend";
+            }
+          }
           </script>
         </div>
       </div>
