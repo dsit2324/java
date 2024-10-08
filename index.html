@@ -134,15 +134,15 @@
             </code>
             <h4>Logické</h4>
             <code>
-              ...
+              && (AND), || (OR), ! (NOT)
             </code>
             <h4>Porovnávací</h4>
             <code>
-              ...
+              ==, ===, !=, !== (striktní nerovnost), >, <, >=, <=
             </code>
             <h4>Bitové</h4>
             <code>
-              ...
+              &, |, ^, ~, <<, >>
             </code>
             <h4>Typové</h4>
             <code>
@@ -250,7 +250,19 @@
             Oblast myších zájmů
           </div>
           <script>
-          <!-- Zadejte JS kód -->
+            const osmy = document.getElementById("osmy");
+            osmy.addEventListener("click", function(){
+              osmy.style.color = "red";
+              osmy.style.fontSize = "200%";
+              this.style.textAlign = "center"
+            })
+
+            osmy.addEventListener("mouseleave", function(){
+              osmy.style.color = "white";
+              osmy.style.fontSize = "100%";
+              this.style.textAlign = "left"
+            })
+
           </script>
         </div>
       </div>
@@ -275,13 +287,12 @@
             </ol>
           </blockquote>
           <div class="bg-info p-3">
-            <button onclick="">
+            <button onclick='console.log(sudeLiche(prompt("Zadej celé číslo")))'>
               Zadej číslo
             </button>
           </div>
           <script>
-              function zapisCisla(){
-                let cislo = prompt("Zadej číslo");
+              function sudeLiche(){
                   if (cislo == 0) { 
                   return 'Nula'; 
                   } else if (cislo % 2 == 1) { 
@@ -290,7 +301,6 @@
                   return 'Sudé'; 
                 } 
               }
-              console.log(zapisCisla())
           </script>
         </div>
         <div class="col-sm-6 bg-secondary text-light p-5">
@@ -380,7 +390,7 @@
       </div>      
     </main>
     <footer class="text-center mt-5">
-      Jméno Příjmení, třída IT2
+      Dominik Svoboda, třída IT2
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
