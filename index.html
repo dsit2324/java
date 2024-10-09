@@ -100,12 +100,12 @@
             <code>
               let x = 0; // s přiřazením hodnoty<br />
               let x; // bez přiřazení hodnoty<br />
-              let x = null; // ...<br />
-              ... // celé číslo (typ number)<br />
-              ... // reálné číslo (typ number)<br />
-              ... // zápis desetinného čísla pomocí exponentu<br />
-              ... // typ string<br />
-              let prestupny = false // logický typ boolean ...<br />
+              let x = null; // nemá žádnou hodnotu<br />
+              let x = 3 // celé číslo (typ integer)<br />
+              let x = 4.3 // reálné číslo (typ float)<br />
+              let x = 3.4e5 // zápis desetinného čísla pomocí exponentu<br />
+              let txt = "Ahoj" // typ string<br />
+              let prestupny = false // logický typ boolean <br />
             </code>
           </div>
         </div>
@@ -130,7 +130,8 @@
             </code>
             <h4>Přiřazovací</h4>
             <code>
-              ...
+              =, +=, -=, -=, /=, %= <br>
+              Příklad: x += 5 je stejné jako x = x + 5
             </code>
             <h4>Logické</h4>
             <code>
@@ -142,11 +143,11 @@
             </code>
             <h4>Bitové</h4>
             <code>
-              &, |, ^, ~, <<, >>
+              & (AND), | (OR), ^ (XOR), ~ (NOT), << (bitový posun vlevo), >> (bitový posun vpravo)
             </code>
             <h4>Typové</h4>
             <code>
-              typeof (typ proměnné), instanceof (...)
+              typeof (typ proměnné), instanceof (jestli patří do určité třídy)
             </code>
           </div>
         </div>
@@ -165,23 +166,25 @@
           <div class="bg-light text-danger p-3">
             <h4>alert()</h4>
             <code>
-              /* ... */<br />
+              /* V popup okně vyskočí hláška v závorce */<br />
               alert('Nezadal jsi správné heslo!');
             </code>
             <h4>prompt()</h4>
             <code>
               /* Do proměnné password vloží heslo zadané uživatelem */<br />
-              ...
+              let password = prompt("Zadej heslo");
             </code>
             <h4>confirm()</h4>
             <code>
-              /* ... */<br />
+              /* Jestli uživatel dá "OK", tak ho to přesměruje na stránky seznamu.cz */<br />
               if (confirm('Chceš přejít na stránky Seznam.cz?'))
               location.href='https://seznam.cz';
             </code>
             <hr />
             <p class="alert alert-primary" role="alert">
-              Varování:
+              Varování: <br>
+                Narušení uživatelské zkušenosti (popup okna jsou pro ně otravná). <br>
+                Zhoršuje to důvěryhodnost stránky.
             </p>
           </div>
         </div>
