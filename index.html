@@ -325,7 +325,7 @@
             </ol>
           </blockquote>
           <div class="bg-light p-3">
-            <a href="">Vypiš den</a>
+            <a href="javascript:console.log(denVTydnu(5))">Vypiš den</a>
           </div>
           <script>
           let den = 1;
@@ -336,7 +336,9 @@
               case 3: return "Středa";
               case 4: return "Čtvrtek";
               case 5: return "Pátek";
-              default: return "Víkend";
+              case 6: 
+              case 7: return "Víkend";
+              default: console.log("Error: proměnná den má nepředvídatelnou hodnotu")
             }
           }
           </script>
@@ -354,7 +356,18 @@
           <div class="bg-info p-3" id="jedenacty">
           </div>
           <script>
-            <!-- Zadejte JS kód -->
+            function prestupneRoky(min = 1900, max = 2000){
+              let vystup = "<ul>\n";
+              for (let i = min; i <= max; i++) {
+                if((i % 4 === 0 && i % 100 !== 0) || i % 400 ===0){
+                  vystup += `\t <li>${i}</li> \n`;
+                }
+              }
+              vystup += "</ul>\n"
+              return vystup;
+            }
+            console.log(prestupneRoky(1900, 2000));
+            document.getElementById("jedenacty").innerHTML = prestupneRoky();
           </script>
         </div>
         <div class="col-sm-6 bg-secondary text-light p-5">
@@ -383,7 +396,13 @@
           <div class="bg-info p-3" id="trinacty">
           </div>
           <script>
-            <!-- Zadejte JS kód -->
+            function vypisDatumCas() {
+              const d = new Date();
+              let datum = `${d.getDate()}. ${d.getMonth()+1}. ${d.getFullYear()}.`;
+              let cas = `${d.getHours()}:${d.getMinutes() > 9 ? d.getMinutes() : "0" + d.getMinutes()}`;
+              return datum + " " + cas;
+            }
+            console.log(vypisDatumCas());
           </script>
         </div>
         <div class="col-sm-6 bg-secondary text-light p-5">
