@@ -321,17 +321,23 @@
           <a href="javascript:console.log(denVTydnu(5))">Vypiš den</a>
         </div>
         <script>
-          let den = 1;
-          function denVTydnu(den) {
-            switch (den) {
-              case 1: return "Pondělí";
-              case 2: return "Úterý";
-              case 3: return "Středa";
-              case 4: return "Čtvrtek";
-              case 5: return "Pátek";
-              case 6:
-              case 7: return "Víkend";
-              default: console.log("Error: proměnná den má nepředvídatelnou hodnotu")
+          function denVTydnu(den){
+            switch(den){
+              case 1:
+                return "Pondělí";
+              case 2:
+                return "Úterý";
+              case 3:
+                return "Středa";
+              case 4: 
+                return "Čtvrtek";
+              case 5:
+                return "Pátek";
+              case 6: 
+              case 7:
+                return "Víkend"; 
+              default:
+                console.return("Chyba");
             }
           }
         </script>
