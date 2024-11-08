@@ -373,29 +373,20 @@
         <div class="bg-info p-3" id="dvanacty">
         </div>
         <script>
-          function prvocislo(cislo = 33) {
-            if (cislo <= 1){
-              return `Číslo ${cislo} není prvočíslem`
-            }
-            else if(cislo === 2 || cislo === 3) {
-              return `Číslo ${cislo} není prvočíslem`
-            }
-            else if(cislo % 2 === 0 || cislo % 3 === 0){
-               return `Číslo ${cislo} není prvočíslem`
-            }
-            let i = 1
-            while (i < cislo){
-              i++;
-              if(cislo % i !== 0){
-                return `Číslo ${cislo} je prvočíslem`;
-              } 
-              else {
-                return `Číslo ${cislo} není prvočíslem`;
+          function prvocislo(cislo = Math.floor(Math.random() * 100)){
+              let vystup = `<p>Číslo ${cislo} `;
+              let delitel = 2;
+              while (delitel < cislo){
+                if (cislo % delitel === 0){
+                  vystup += "není prvočíslo.</p>";
+                  return vystup;
+                }
+                delitel++;
               }
+              vystup += "je prvočíslo.</p>";
+              return vystup;
             }
-            }
-          
-          document.getElementById("dvanacty").innerHTML = prvocislo();
+            document.getElementById("dvanacty").innerHTML = prvocislo();
         </script>
       </div>
     </div>
@@ -411,13 +402,13 @@
         <div class="bg-info p-3" id="trinacty">
         </div>
         <script>
-          function vypisDatumCas() {
-            const d = new Date();
-            let datum = `${d.getDate()}. ${d.getMonth() + 1}. ${d.getFullYear()}.`;
-            let cas = `${d.getHours()}:${d.getMinutes() > 9 ? d.getMinutes() : "0" + d.getMinutes()}`;
-            return datum + " " + cas;
-          }
-          console.log(vypisDatumCas());
+          function VypisDatumCas() {
+              const d = new Date();
+              let datum = `${d.getDate()}. ${d.getMonth() + 1}. ${d.getFullYear()}`;
+              let cas = `${d.getHours()}:${d.getMinutes() > 9 ? d.getMinutes : "0" + d.getMinutes()}`;
+              return datum + " " + cas;
+             }
+             document.getElementById("trinacty").innerHTML = VypisDatumCas();
         </script>
       </div>
       <div class="col-sm-6 bg-secondary text-light p-5">
